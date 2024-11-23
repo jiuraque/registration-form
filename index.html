@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <h1>Registration Form</h1>
+    <p>Please fill out this form with the required information</p>
+
+    <form action="https://register-demo.freecodecamp.org" method="post">
+      <fieldset>
+        <label for="first-name"
+          >Enter yourFirst Name:
+          <input name="first-name" id="first-name" type="text" required />
+        </label>
+        <label for="last-name"
+          >Enter your Last Name:
+          <input name="last-name" id="last-name" type="text" required />
+        </label>
+        <label for="email"
+          >Enter your Email:
+          <input name="email" id="email" type="email" required />
+        </label>
+        <label for="new-password"
+          >Create a New Password:
+          <input
+            name="new-password"
+            id="new-password"
+            type="password"
+            required
+            pattern="[a-z0-5]{8,}"
+          />
+        </label>
+      </fieldset>
+      <fieldset>
+        <label for="personal-account">
+          <input
+            class="inline"
+            name="personal-account"
+            id="personal-account"
+            type="radio"
+            name="account-type"
+          />
+          Personal Account
+        </label>
+        <label for="business-account">
+          <input
+          class="inline"
+            name="business-account"
+            id="business-account"
+            type="radio"
+            name="account-type"
+          />
+          Business Acount
+        </label>
+        <label for="terms-and-conditions">
+          <input
+          class="inline"
+            name="terms-and-conditions"
+            id="terms-and-conditions"
+            type="checkbox"
+            required
+          />
+          I Accept the
+          <a href="https://www.freecodecamp.org/news/terms-of-service/"
+            >Terms & Conditions</a
+          >
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <label for="profile-pic">
+          Upload a Profile Picture
+          <input name="profile-pic" id="profile-pic" type="file" />
+        </label>
+        <label for="age">
+          Input your Age (years):
+          <input name="age" id="age" type="number" min="13" max="120" />
+        </label>
+        <label for="referrer">
+          How did you hear about us?
+          <select name="referrer" id="referrer">
+            <option value="">(Select one)</option>
+            <option value="1">freeCodeCamp News</option>
+            <option value="2">freeCodeCamp Youtube Channel</option>
+            <option value="3">freeCodeCamp Forum</option>
+            <option value="4">Other</option>
+          </select>
+        </label>
+
+        <label for="bio">
+          Provide a bio:
+          <textarea
+            id="bio"
+            rows="3"
+            cols="30"
+            placeholder="I like codding at the beach..."
+            name="bio"
+          >
+          </textarea>
+        </label>
+      </fieldset>
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
